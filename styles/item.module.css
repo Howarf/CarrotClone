@@ -1,0 +1,17 @@
+.Post{
+    margin-top: 94px;
+}
+.section_images{
+    width: 729px;
+    margin: 0 auto;
+}
+.section_images>div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.section_images button{
+    height: 100px;
+    background-color: white;
+    border: none;
+}
