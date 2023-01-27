@@ -1,4 +1,6 @@
 import styles from "../../styles/item.module.css"
+import Card from "../../src/component/Card"
+import Link from "next/link"
 
 export default function Post(){
     return(
@@ -7,15 +9,19 @@ export default function Post(){
                 <div>
                     <button>{"<"}</button>
                     <div>
-                        <img src="/images/testimg.jpg"/>
+                        <img src="/images/test1.jpg"/>
+                        <img src="/images/test2.jpg"/>
                     </div>
                     <button>{">"}</button>
                 </div>
             </section>
             <section className={styles.section_profile}>
                 <div>
-                    <img/>
-                    <div>닉네임</div>
+                    <img src="/images/bros_blank.jpg"/>
+                    <div>
+                        <p id={styles.nickName}>닉네임</p>
+                        <p id={styles.address}>서울시 관악구</p>
+                    </div>
                 </div>
             </section>
             <section className={styles.section_description}>
@@ -29,10 +35,19 @@ export default function Post(){
                         블랄라<br/>
                     </p>
                 </div>
-                <div className={""}>
-                    <span>관심 12 </span>
-                    ∙
-                    <span> 채팅 13</span>
+                <div className={styles.article_count}>
+                    <span>관심 12 ∙ 채팅 13 ∙ 조회수 123</span>
+                </div>
+            </section>
+            <section className={styles.suggest_item}>
+                <div className={styles.suggest_title}>
+                    <h1>이런 상품은 어떠세요?</h1>
+                    <Link href={"/view/item_list"}>더 보기</Link>
+                </div>
+                <div className={styles.suggest_list}>        
+                    <Card/>
+                    <Card/>
+                    <Card/>
                 </div>
             </section>
         </article>
