@@ -1,6 +1,7 @@
 import styles from "../../styles/itemList.module.css"
 import Card from "../../src/component/Card"
 import { useState } from "react"
+import Link from "next/link";
 
 export default function item_list(){
     let cList = [["관악구","강서구","강남구"],["전포동","수영구","해운대구"]];
@@ -28,17 +29,20 @@ export default function item_list(){
     return(
         <div className={styles.content}>
             <h1 className={styles.title}>{local+" "+city+" "+title}</h1>
-            <nav className={styles.selects}>
-                <select name="local" onChange={changeLocal}>
-                    <option value={""}>지역을 선택하세요</option>
-                    <option value={"서울특별시"}>서울특별시</option>
-                    <option value={"부산광역시"}>부산광역시</option>
-                </select>
-                <select name="city" onChange={changeCity} disabled={local === "" ? true : false}>
-                    <option value={""}>동네를 선택하세요</option>
-                    {cityList()}
-                </select>
-            </nav>
+            <div className={styles.subNav}>
+                <Link id={styles.uploadBtn} href={"/view/upload"}><img src="/images/logo2.png"/>등록하기</Link>
+                <nav className={styles.selects}>
+                    <select name="local" onChange={changeLocal}>
+                        <option value={""}>지역을 선택하세요</option>
+                        <option value={"서울특별시"}>서울특별시</option>
+                        <option value={"부산광역시"}>부산광역시</option>
+                    </select>
+                    <select name="city" onChange={changeCity} disabled={local === "" ? true : false}>
+                        <option value={""}>동네를 선택하세요</option>
+                        {cityList()}
+                    </select>
+                </nav>
+            </div>
             <div className={styles.cardList}>
                 <Card/>
                 <Card/>

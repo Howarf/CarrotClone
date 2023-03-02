@@ -8,11 +8,33 @@
     color: #212529;
     margin-bottom: 40px;
 }
-.selects{
+.subNav{
+    display: flex;
+    justify-content: space-between;
     width: 980px;
     margin: 0 auto;
-    text-align: right;
     margin-bottom: 30px;
+}
+#uploadBtn{
+    width: 120px;
+    font-size: 18px;
+    border: solid 1px #ff6f0f;
+    border-radius: 6px;
+    text-align: center;
+    padding-top: 6px;
+    line-height: -10px;
+    text-decoration: none;
+    color: #ff6f0f;
+    font-weight: bold;
+}
+#uploadBtn:hover{
+    color: #ff8f44;
+    background-color: #f2f3f6;
+}
+#uploadBtn img{
+    position: relative;
+    top: 3px;
+    width: 24px;
 }
 .selects select{
     width: 180px;

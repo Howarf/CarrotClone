@@ -19,7 +19,7 @@ export default function SignIn(){
                     </div>
                     <div className={styles.linkBox}>
                         <Link id={styles.link} href={""}>비밀번호 찾기</Link>
-                        <Link id={styles.link} href={""}>회원가입</Link>
+                        <Link id={styles.link} href={"/login/SignUp"}>회원가입</Link>
                     </div>
                     <input className={styles.submitBtn} type="submit" value="로그인"/>
                 </form>

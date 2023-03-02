@@ -80,26 +80,9 @@ export default function Section_bottom(){
                             </div>
                         </Link>
                     </article>
-                    <article className={section4.card}>
-                        <Link href="#" className={section4.cardLink}>
-                            <div className={section4.cardImg}>
-                                <img src=""/>
-                            </div>
-                            <div className={section4.cardDesc}>
-                                <h2 className={section4.cardTitle}>{}</h2>
-                                <div className={section4.cardPrice}>{}</div>
-                                <div className={section4.cardAddress}>{}</div>
-                            </div>
-                            <div className={section4.cardCount}>
-                                <span>관심{}</span>
-                                •
-                                <span>채팅{}</span>
-                            </div>
-                        </Link>
-                    </article>
                 </div>
                 <div id={section4.moreList}>
-                    <Link href={""}>인기매물 더 보기</Link>
+                    <Link href={"/view/item_list"}>인기매물 더 보기</Link>
                 </div>
             </div>
         </section>
